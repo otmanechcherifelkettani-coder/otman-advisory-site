@@ -1,6 +1,6 @@
 # Otman Kettani advisory website — v2
 
-A private, dependency-free static website for Otman's independent AI and operations advisory practice.
+A dependency-free static website for Otman's independent AI and operations advisory practice.
 
 ## Preview locally
 

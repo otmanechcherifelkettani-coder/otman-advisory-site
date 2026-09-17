@@ -2,7 +2,7 @@
 
 ## Positioning
 
-Otman helps leaders find and deliver AI, automation and process opportunities that are worth doing. The honest answer may be AI, conventional automation, process change or no build. The site stays broad while offering narrow ways to begin.
+Otman fixes expensive manual workflows. He measures what the current process costs (time, errors, money), chooses the fix that beats that baseline - AI, conventional automation, workflow change or no build - and ships one scoped pilot against it. AI only when it earns its place. The site stays broad while offering narrow ways to begin.
 
 Target: founders, COOs, customer/operations leaders and transformation leads at roughly 50–500 person companies. Geographic paths: Benelux, France, Morocco and MENA. Languages: English and French.
 
@@ -27,8 +27,8 @@ Do not add confidential employer detail, internal metrics, client logos, testimo
 ## Offer architecture
 
 Current entry points:
-1. AI Opportunity Scan
-2. Customer Contact Autopsy
+1. Customer Contact Autopsy (highlighted first)
+2. Workflow Cost Scan
 3. Automation Graveyard Review
 4. Pilot Delivery
 
