@@ -31,7 +31,10 @@
     <div class="hero-kicker">Independent advisor · Amsterdam</div>
     <h1>Find the work<br>worth doing.<br><span>Then ship it.</span></h1>
     <div class="hero-bottom">
-      <p>I help operations and transformation leaders turn AI pressure into a clear decision: use AI, automate, fix the process, or do nothing. Then I work with the team to deliver the right answer.</p>
+      <div class="hero-intro">
+        <p>I help operations and transformation leaders turn AI pressure into a clear decision: use AI, automate, fix the process, or do nothing. Then I work with the team to deliver the right answer.</p>
+        <a class="hero-cta" href="mailto:otman.echcherifelkettani@gmail.com?subject=One%20messy%20workflow">Send me one messy workflow <span aria-hidden="true">↗</span></a>
+      </div>
       <div class="hero-meta">
         <span>50–500 person companies</span>
         <span>Advisory + hands-on delivery</span>
@@ -72,15 +75,15 @@
       <p>Every engagement starts small enough to test the thinking before committing to a larger programme.</p>
     </div>
     <div class="offer-list">
-      <article class="offer">
+      <article class="offer offer-primary">
         <div class="offer-number">01</div>
-        <div><h3>AI Opportunity Scan</h3><p>Rank the few opportunities worth pursuing and make the do-not-build list explicit.</p></div>
-        <div class="offer-for">When priorities are unclear</div>
+        <div><div class="offer-label">Best place to start</div><h3>Customer Contact Autopsy</h3><p>Find which contacts can be removed or automated, and where automation would make service worse.</p></div>
+        <div class="offer-for">For support and service operations</div>
       </article>
       <article class="offer">
         <div class="offer-number">02</div>
-        <div><h3>Customer Contact Autopsy</h3><p>Find which contacts can be removed or automated, and where automation would make service worse.</p></div>
-        <div class="offer-for">For support and service operations</div>
+        <div><h3>AI Opportunity Scan</h3><p>Rank the few opportunities worth pursuing and make the do-not-build list explicit.</p></div>
+        <div class="offer-for">When priorities are unclear</div>
       </article>
       <article class="offer">
         <div class="offer-number">03</div>
@@ -95,8 +98,26 @@
     </div>
   </section>
 
+  <section class="sample" aria-labelledby="sample-title">
+    <div class="section-index">03 / Sample output</div>
+    <div class="sample-grid">
+      <div class="sample-copy reveal">
+        <div class="sample-eyebrow">Illustrative, not a client result</div>
+        <h2 id="sample-title">A decision sheet, not another AI roadmap.</h2>
+        <p>A Customer Contact Autopsy turns a messy contact queue into a short list of decisions. Each contact type gets an owner, evidence, a recommended intervention and a measure to watch.</p>
+      </div>
+      <div class="decision-sheet reveal" aria-label="Illustrative Customer Contact Autopsy decision sheet">
+        <div class="sheet-head"><span>Contact type</span><span>Decision</span><span>Why</span></div>
+        <div class="sheet-row"><strong>Where is my order?</strong><span class="decision automate">Automate</span><p>Known status, repeatable answer</p></div>
+        <div class="sheet-row"><strong>Wrong delivery address</strong><span class="decision workflow">Fix workflow</span><p>Prevent the contact upstream</p></div>
+        <div class="sheet-row"><strong>Safety complaint</strong><span class="decision human">Keep human</span><p>Judgement and accountability matter</p></div>
+        <div class="sheet-foot"><span>Example measures</span><strong>Contact rate · satisfaction · handling time · cost</strong></div>
+      </div>
+    </div>
+  </section>
+
   <section class="experience" id="experience">
-    <div class="section-index light">03 / Experience</div>
+    <div class="section-index light">04 / Experience</div>
     <div class="experience-grid">
       <div class="experience-main">
         <h2>Operator experience.<br>No borrowed certainty.</h2>
@@ -122,7 +143,7 @@
   </section>
 
   <section class="fit">
-    <div class="section-index">04 / Fit</div>
+    <div class="section-index">05 / Fit</div>
     <div class="fit-grid">
       <h2>Useful when the stakes are real and the answer is not obvious.</h2>
       <div class="fit-copy">
@@ -173,6 +194,18 @@ mobileNav.addEventListener('click', event => {
     button.textContent = 'Menu';
   }
 });
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  document.documentElement.classList.add('has-motion');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16 });
+  document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+}
 </script>
 </body>
 </html>
