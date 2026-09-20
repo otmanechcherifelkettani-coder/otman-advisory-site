@@ -39,10 +39,21 @@
         </div>
         <p class="cta-note">No prep needed. Bring one support workflow.</p>
       </div>
-      <aside class="proof-card" aria-label="Experience summary">
-        <span>Production experience</span>
-        <p>LLM support automation at production scale, measured on customer satisfaction, handling time, and cost.</p>
-      </aside>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="ticket-stack">
+          <article class="ticket-plane ticket-back"><span>Contact 1842</span><i></i><i></i><i></i></article>
+          <article class="ticket-plane ticket-mid"><span>Contact 1937</span><i></i><i></i><b>REPEAT</b></article>
+          <article class="ticket-plane ticket-front"><span>Contact driver</span><strong>Wrong delivery address</strong><div class="route"><em>RAW QUEUE</em><em>REDESIGN</em></div></article>
+        </div>
+        <div class="metric-cluster">
+          <div><span>CSAT</span><strong>Measured</strong></div>
+          <div><span>Handling time</span><strong>Measured</strong></div>
+          <div><span>Cost</span><strong>Measured</strong></div>
+        </div>
+        <p class="visual-caption">Production-scale LLM support automation</p>
+      </div>
     </div>
   </section>
 
@@ -74,6 +85,11 @@
         <h2>One queue in. A ranked action plan out.</h2>
         <p>I review the contact drivers, price the manual work, and show you what to remove, automate, redesign, or leave with people.</p>
       </div>
+    </div>
+    <div class="workflow-stage" aria-hidden="true">
+      <div class="workflow-source"><span></span><span></span><span></span><span></span></div>
+      <div class="workflow-path"><i></i><i></i><i></i></div>
+      <div class="workflow-output"><b>REMOVE</b><b>AUTOMATE</b><b>REDESIGN</b><b>KEEP HUMAN</b></div>
     </div>
     <div class="steps">
       <article>
@@ -185,6 +201,18 @@
   <span>Independent advisory · Amsterdam</span>
 </footer>
 <script>
+const root = document.documentElement;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reducedMotion) {
+  window.addEventListener('pointermove', event => {
+    root.style.setProperty('--mx', `${(event.clientX / innerWidth - .5) * 2}`);
+    root.style.setProperty('--my', `${(event.clientY / innerHeight - .5) * 2}`);
+  }, { passive: true });
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.target.classList.toggle('in-view', entry.isIntersecting));
+  }, { threshold: .18 });
+  document.querySelectorAll('.fit article, .workflow-stage, .analysis-card, .experience-facts').forEach(el => revealObserver.observe(el));
+}
 const menuButton = document.querySelector('.menu-button');
 const mobileNav = document.querySelector('.mobile-nav');
 menuButton.addEventListener('click', () => {
